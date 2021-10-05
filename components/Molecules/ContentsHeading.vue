@@ -39,6 +39,7 @@ export default {
 
     this.handleScroll();
 
+
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
@@ -46,10 +47,13 @@ export default {
   },
   methods: {
     handleScroll() {
+      console.log(this);
       this.targets = this.$el.querySelectorAll('.js-text-animation');
       this.timing = 100;
       this.scroll = window.scrollY;
       this.height = window.innerHeight;
+
+      // const hoge = this.$el.querySelectorAll('.js-text-animation');
 
       this.targets.forEach((target) => {
         this.pos = target.getBoundingClientRect().top + this.scroll;

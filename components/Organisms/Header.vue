@@ -45,6 +45,7 @@
 </template>
 
 <script>
+// import pages, {newsList} from '@/const/pages.js';
 export default {
   data() {
     return {
